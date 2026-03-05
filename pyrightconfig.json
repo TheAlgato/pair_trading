@@ -1,0 +1,9 @@
+{
+    "pythonVersion": "3.13",
+    "pythonPlatform": "Darwin",
+    "extraPaths": [
+        "/Users/datapaws/Actual Desktop/Quant Analysis",
+        "/Users/datapaws/Actual Desktop/Quant Analysis/pairs_trading",
+        "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages"
+    ]
+}
