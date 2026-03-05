@@ -20,6 +20,14 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
+# Ensure Matplotlib and font caches use writable directories inside the project.
+MPL_DIR = os.path.join(ROOT, ".mplconfig")
+CACHE_DIR = os.path.join(ROOT, ".cache")
+os.makedirs(MPL_DIR, exist_ok=True)
+os.makedirs(CACHE_DIR, exist_ok=True)
+os.environ.setdefault("MPLCONFIGDIR", MPL_DIR)
+os.environ.setdefault("XDG_CACHE_HOME", CACHE_DIR)
+
 from data.universe import get_tickers, download_prices, scan_pairs, pretty_ticker
 from signals.signals import compute_spread, compute_zscore, generate_signals, plot_signals
 from backtest.backtest import run_backtest, compute_metrics, plot_equity

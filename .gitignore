@@ -3,3 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 .DS_Store
+
+# User generated directories
+.cache/
+.mplconfig/
+
+# Output directory, but keep .gitkeep
+output/*
+!output/.gitkeep
